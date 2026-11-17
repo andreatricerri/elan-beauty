@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Élan Beauty · Salone di bellezza (progetto dimostrativo)</title>
+  <meta name="description" content="Élan Beauty, salone di bellezza fittizio: manicure, viso, corpo, sguardo ed epilazione. Prezzi e disponibilità dimostrativi.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#F7F3F0">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:title" content="Élan Beauty · Salone di bellezza (progetto dimostrativo)">
+  <meta property="og:description" content="Élan Beauty, salone di bellezza fittizio: manicure, viso, corpo, sguardo ed epilazione. Prezzi e disponibilità dimostrativi.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script defer src="js/data.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/availability.js"></script>
+  <script defer src="js/gallery.js"></script>
+  <script defer src="js/home.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto principale</a>
+  <div class="demo-ribbon">Élan Beauty è un salone di fantasia: progetto portfolio, nessuna prenotazione o richiesta viene inviata.</div>
+  <header class="site-header">
+    <div class="container"><div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Élan Beauty, torna alla home"><svg class="brand-mark" viewBox="0 0 40 48" aria-hidden="true" focusable="false"><path d="M0 48V20a20 20 0 0 1 40 0v28z" fill="#704957"/><path d="M5 48V21a15 15 0 0 1 30 0v27" fill="none" stroke="#F7F3F0" stroke-opacity=".28" stroke-width="1"/><path d="M15 23v15M15 23h11M15 30.5h8.5M15 38h11" fill="none" stroke="#C7AE88" stroke-width="2.6" stroke-linecap="round"/><path d="M19.5 18.5 23.5 14.5" stroke="#C7AE88" stroke-width="2.4" stroke-linecap="round"/></svg><span class="brand-text"><span class="brand-word">élan<span>beauty</span></span><small>atelier di bellezza</small></span></a>
+      <nav class="nav-desktop" aria-label="Navigazione principale">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="salone.html">Il salone</a></li>
+          <li class="has-sub">
+            <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="d-sub-tratt">Trattamenti <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button>
+            <ul class="submenu" id="d-sub-tratt" hidden>
+              <li><a href="trattamenti.html">Tutti i trattamenti</a></li>
+              <li><a href="listino.html">Listino prezzi</a></li>
+              <li><a href="pacchetti.html">Pacchetti</a></li>
+            </ul>
+          </li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="galleria.html">Galleria</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary header-cta" href="prenota.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Prenota</a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="drawer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></button>
+    </div></div>
+  </header>
+  <div class="drawer" id="drawer" hidden>
+    <div class="drawer-backdrop" data-drawer-close></div>
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu di navigazione" tabindex="-1">
+      <div class="drawer-head">
+        <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 40 48" aria-hidden="true" focusable="false"><path d="M0 48V20a20 20 0 0 1 40 0v28z" fill="#704957"/><path d="M5 48V21a15 15 0 0 1 30 0v27" fill="none" stroke="#F7F3F0" stroke-opacity=".28" stroke-width="1"/><path d="M15 23v15M15 23h11M15 30.5h8.5M15 38h11" fill="none" stroke="#C7AE88" stroke-width="2.6" stroke-linecap="round"/><path d="M19.5 18.5 23.5 14.5" stroke="#C7AE88" stroke-width="2.4" stroke-linecap="round"/></svg><span class="brand-text"><span class="brand-word">élan<span>beauty</span></span><small>atelier di bellezza</small></span></a>
+        <button type="button" class="icon-btn" data-drawer-close aria-label="Chiudi menu"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <div class="drawer-body">
+        <nav class="drawer-nav" aria-label="Navigazione mobile">
+          <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="salone.html">Il salone</a></li>
+          <li class="has-sub">
+            <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="m-sub-tratt">Trattamenti <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></button>
+            <ul class="submenu" id="m-sub-tratt" hidden>
+              <li><a href="trattamenti.html">Tutti i trattamenti</a></li>
+              <li><a href="listino.html">Listino prezzi</a></li>
+              <li><a href="pacchetti.html">Pacchetti</a></li>
+            </ul>
+          </li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="galleria.html">Galleria</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+        </nav>
+        <div class="drawer-foot">
+          <a class="btn btn-primary btn-block" href="prenota.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Richiedi un appuntamento</a>
+          <p class="small muted">Progetto dimostrativo: nessun dato viene inviato.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <noscript><div class="notice" style="margin:1rem">Per vedere catalogo, filtri, galleria e prenotazione simulata attiva JavaScript nel browser.</div></noscript>
+  <main id="main" tabindex="-1">
+    <section class="hero">
+      <div class="container bento">
+        <div class="tile tile--intro anim-in">
+          <div>
+            <p class="eyebrow">Salone di bellezza · progetto dimostrativo</p>
+            <h1>Bellezza curata, <span class="soft">con calma.</span></h1>
+            <p class="lead">Mani, viso, corpo e sguardo in un ambiente luminoso. Prezzi chiari, tempi onesti, nessuna promessa miracolosa.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="trattamenti.html">Scopri i trattamenti <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="btn btn-outline" href="prenota.html">Richiedi un appuntamento</a>
+            </div>
+          </div>
+          <div class="quick-find">
+            <span class="quick-find__label" id="qf-label">Cosa ti serve oggi?</span>
+            <div class="chips" data-quick-cats aria-labelledby="qf-label"></div>
+          </div>
+        </div>
+        <div class="tile tile--media anim-in anim-in--d1">
+          <img src="assets/images/hero-salone.svg" alt="Ambiente del salone con arco luminoso, poltrona imbottita e piante (illustrazione segnaposto)" width="800" height="1000" fetchpriority="high">
+          <div class="live-slot" data-live-slot>
+            <span class="live-dot" aria-hidden="true"></span>
+            <span class="live-slot__label">Prossima fascia simulata</span>
+            <span class="live-slot__value">Calcolo disponibilità…</span>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div class="tile tile--stat tile--blush"><span class="icon-btn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3c.6 4.2 2.8 6.4 7 7-4.2.6-6.4 2.8-7 7-.6-4.2-2.8-6.4-7-7 4.2-.6 6.4-2.8 7-7z"/></svg></span><strong data-stat="treatments">—</strong><span><a href="trattamenti.html">trattamenti in <span data-stat="cats">—</span> categorie</a></span></div>
+          <div class="tile tile--stat tile--plum"><span class="icon-btn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><strong data-stat="duration">—</strong><span><a href="listino.html">durate indicate in ogni scheda del listino</a></span></div>
+          <div class="tile tile--stat tile--dark"><span class="icon-btn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="8" width="17" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12M12 8c-2-4-6-3-5 0M12 8c2-4 6-3 5 0"/></svg></span><strong data-stat="pkg">—</strong><span><a href="pacchetti.html">prezzo dimostrativo del pacchetto più leggero</a></span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee-wrap" aria-hidden="true"><div class="marquee"><div class="marquee__track" data-marquee></div></div></div>
+
+    <section class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">I più richiesti</p><h2 id="featured-title">Trattamenti principali</h2></div>
+          <div class="section-head__aside">
+            <div class="btn-row">
+              <div class="carousel__nav"><button type="button" class="icon-btn" data-car="prev" aria-label="Trattamenti precedenti"><svg class="icon flip" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button type="button" class="icon-btn" data-car="next" aria-label="Trattamenti successivi"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+              <a class="btn btn-ghost" href="trattamenti.html">Tutti i trattamenti</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel">
+          <ul class="carousel__track" data-featured tabindex="0" aria-label="Trattamenti principali, scorrimento orizzontale"></ul>
+          <div class="carousel__progress" aria-hidden="true"><span data-car-progress></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" aria-labelledby="explore-title">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Esplora</p><h2 id="explore-title">Sei mondi, un solo salone</h2></div>
+          <div class="section-head__aside"><p>Mani, piedi, viso, corpo, sguardo ed epilazione: scegli una categoria e confronta subito trattamenti, durate e prezzi dimostrativi, senza aprire dieci pagine diverse. Da ogni scheda puoi filtrare il catalogo o simulare una richiesta.</p></div>
+        </div>
+        <div class="explorer" data-explorer></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="exp-title">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Il percorso</p><h2 id="exp-title">Com’è un appuntamento da Élan</h2></div>
+          <div class="section-head__aside"><p>Dalla scelta del trattamento ai consigli per casa, ogni appuntamento segue quattro momenti semplici. Nessuna fretta, nessuna proposta non richiesta e tutto il tempo indicato in scheda dedicato solo a te.</p></div>
+        </div>
+        <ol class="steps-list" data-experience></ol>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="pkg-title">
+      <div class="container pkg-layout">
+        <div class="pkg-intro">
+          <div><p class="eyebrow">Combinazioni</p><h2 id="pkg-title">Pacchetti</h2></div>
+          <p>Più trattamenti insieme, con il calcolo del prezzo sempre visibile. Importi dimostrativi.</p>
+          <a class="btn btn-primary" href="pacchetti.html" style="background:#fff;color:var(--c-text)">Tutti i pacchetti <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="pkg-grid" data-packages-preview style="display:contents"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Le persone</p><h2 id="team-title">Il team</h2></div>
+          <div class="section-head__aside"><p>Giulia, Sara, Noemi e Alessia sono profili dimostrativi con avatar illustrati: ognuna segue un gruppo di trattamenti e in prenotazione puoi sceglierla oppure lasciare “indifferente” per vedere più fasce libere.</p><a class="btn btn-ghost" href="team.html">Conosci il team <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        </div>
+        <div class="team-preview" data-team-preview></div>
+      </div>
+    </section>
+
+    <section class="section section--blush" aria-labelledby="gal-title">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Gli spazi</p><h2 id="gal-title">Uno sguardo al salone</h2></div>
+          <div class="section-head__aside"><p>Reception, postazione mani, cabine viso e corpo, area relax: spazi luminosi e ordinati, pensati per staccare dalla giornata. Tocca un’immagine per ingrandirla e scorrere la galleria.</p><a class="btn btn-ghost" href="galleria.html">Apri la galleria <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        </div>
+        <div class="gallery-preview" data-gallery data-limit="5"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="rev-title">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Esempi</p><h2 id="rev-title">Recensioni dimostrative</h2></div>
+          <div class="section-head__aside"><p>Tre testi scritti per mostrare come apparirebbero le opinioni delle clienti. Sono esempi dimostrativi: non provengono da persone reali e non descrivono risultati garantiti.</p></div>
+        </div>
+        <div class="grid grid--3" data-reviews></div>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="faq-title">
+      <div class="container faq-news">
+        <div>
+          <div class="section-head">
+            <div><p class="eyebrow">Dubbi?</p><h2 id="faq-title">Domande frequenti</h2></div>
+          </div>
+          <div class="accordion" data-faq-preview></div>
+          <a class="btn btn-ghost" href="faq.html" style="margin-top:1.25rem">Tutte le FAQ <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <aside class="news-card" aria-labelledby="nl-title">
+          <h2 id="nl-title">Newsletter (dimostrativa)</h2>
+          <p class="muted" style="margin:0">Mostra solo validazione e conferma: nessun indirizzo viene registrato o inviato. Usa un’email di fantasia.</p>
+          <form data-demo-form="newsletter" novalidate>
+            <div class="field">
+              <label for="nl-email">Email di fantasia</label>
+              <input class="input" id="nl-email" name="email" type="email" autocomplete="off" placeholder="nome@esempio.example" required data-label="L’email">
+            </div>
+            <button class="btn btn-primary btn-block" type="submit" style="margin-top:.75rem">Iscriviti (demo)</button>
+          </form>
+          <div class="notice notice--success" data-form-status role="status" tabindex="-1" hidden></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--cta">
+      <div class="container">
+        <div class="cta-band">
+          <div><h2>Hai già scelto?</h2><p>Simula la richiesta di un appuntamento in pochi passi. Nessun dato viene inviato.</p></div>
+          <div class="btn-row"><a class="btn btn-primary" href="prenota.html">Richiedi un appuntamento</a><a class="btn btn-outline" href="trattamenti.html">Scopri i trattamenti</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 40 48" aria-hidden="true" focusable="false"><path d="M0 48V20a20 20 0 0 1 40 0v28z" fill="#704957"/><path d="M5 48V21a15 15 0 0 1 30 0v27" fill="none" stroke="#F7F3F0" stroke-opacity=".28" stroke-width="1"/><path d="M15 23v15M15 23h11M15 30.5h8.5M15 38h11" fill="none" stroke="#C7AE88" stroke-width="2.6" stroke-linecap="round"/><path d="M19.5 18.5 23.5 14.5" stroke="#C7AE88" stroke-width="2.4" stroke-linecap="round"/></svg><span class="brand-text"><span class="brand-word">élan<span>beauty</span></span><small>atelier di bellezza</small></span></a>
+          <p class="footer-note" style="margin-top:1rem">Salone di bellezza <strong>fittizio</strong> creato come progetto portfolio. Nomi, prezzi, orari e recensioni sono dimostrativi.</p>
+          <div class="footer-social">
+            <button type="button" class="icon-btn" data-demo="instagram" aria-label="Instagram (demo)"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l2-3h4l2 3"/><circle cx="12" cy="13.5" r="3.5"/></svg></button>
+            <button type="button" class="icon-btn" data-demo="facebook" aria-label="Facebook (demo)"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></button>
+            <button type="button" class="icon-btn" data-demo="whatsapp" aria-label="WhatsApp (demo)"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg></button>
+          </div>
+        </div>
+        <nav aria-label="Link del footer">
+          <p class="footer-title">Esplora</p>
+          <ul class="footer-links">
+            <li><a href="trattamenti.html">Trattamenti</a></li>
+            <li><a href="listino.html">Listino prezzi</a></li>
+            <li><a href="pacchetti.html">Pacchetti</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="galleria.html">Galleria</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="footer-title">Informazioni</p>
+          <ul class="footer-links">
+            <li><a href="salone.html">Il salone</a></li>
+            <li><a href="faq.html">Domande frequenti</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+            <li><a href="prenota.html">Prenota (demo)</a></li>
+            <li><a href="privacy.html">Privacy della demo</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Orari indicativi</p>
+          <ul class="hours-list" data-hours><li><span>Martedì–Sabato</span><span>su appuntamento</span></li></ul>
+          <p class="footer-note" style="margin-top:1rem">Via dei Glicini 12 (indirizzo di fantasia)<br>ciao@elanbeauty.example</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Élan Beauty · Progetto fittizio a scopo portfolio, nessuna attività reale.</p>
+        <p><a href="privacy.html">Privacy</a> · Nessun cookie di profilazione o analytics</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
