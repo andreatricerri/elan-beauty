@@ -713,3 +713,6 @@
   .hero h1 { font-size: clamp(2.2rem, 13cqi, 6.5rem); max-width: none; }
 }
 .tile--intro .eyebrow, .tile--intro .lead, .tile--intro .btn-row, .tile--intro .quick-find { position: relative; z-index: 1; }
+/* Eyebrow dell'hero su due righe, senza linea */
+.eyebrow--stack { display: flex; flex-direction: column; align-items: flex-start; gap: 0.15rem; }
+.eyebrow--stack::before { display: none; }

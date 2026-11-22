@@ -188,7 +188,7 @@
       var wide = window.matchMedia && window.matchMedia('(min-width: 56em)').matches;
       var top, bottom;
       if (wide) {
-        top = eb ? eb.getBoundingClientRect().bottom + 8 : t.top + 14;
+        top = t.top + 14;
         bottom = actions ? actions.getBoundingClientRect().top - 14 : w.bottom;
       } else {
         top = eb ? eb.getBoundingClientRect().bottom + 6 : w.top;
