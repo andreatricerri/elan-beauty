@@ -184,15 +184,24 @@
       Array.prototype.forEach.call(range.getClientRects(), function (r) { if (r.width > 1) maxRight = Math.max(maxRight, r.right); });
       var w = wrap.getBoundingClientRect(), t = tile.getBoundingClientRect();
       var eb = wrap.previousElementSibling, ld = wrap.nextElementSibling;
-      var top = eb ? eb.getBoundingClientRect().bottom + 6 : w.top;
-      var bottom = ld ? ld.getBoundingClientRect().top - 6 : w.bottom;
-      var gap = 10, edge = 18;
-      var r = Math.min(t.right - maxRight - gap - edge, (bottom - top) / 2, 280);
+      var actions = ld && ld.nextElementSibling;
+      var wide = window.matchMedia && window.matchMedia('(min-width: 56em)').matches;
+      var top, bottom;
+      if (wide) {
+        top = eb ? eb.getBoundingClientRect().bottom + 8 : t.top + 14;
+        bottom = actions ? actions.getBoundingClientRect().top - 14 : w.bottom;
+      } else {
+        top = eb ? eb.getBoundingClientRect().bottom + 6 : w.top;
+        bottom = ld ? ld.getBoundingClientRect().top - 6 : w.bottom;
+      }
+      var edgeX = t.right - 8;
+      var r = Math.min((bottom - top) / 2, (edgeX - maxRight) / 1.05, 300);
       if (r < 48) { svg.classList.remove('is-ready'); svg.style.width = '0px'; return; }
-      svg.style.left = (maxRight - w.left + gap) + 'px';
-      svg.style.width = r + 'px';
+      var cx = edgeX - r, cy = (top + bottom) / 2;
+      svg.style.left = (cx - r - w.left) + 'px';
+      svg.style.top = (cy - w.top) + 'px';
+      svg.style.width = (r * 2) + 'px';
       svg.style.height = (r * 2) + 'px';
-      svg.style.top = ((top + bottom) / 2 - w.top) + 'px';
       svg.classList.add('is-ready');
     }
     var tm = null;
