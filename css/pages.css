@@ -698,10 +698,6 @@
 }
 .hero-flower.is-ready { opacity: 1; }
 .hero-flower__petals { transform-box: view-box; transform-origin: 50% 50%; }
-@media (prefers-reduced-motion: no-preference) {
-  .hero-flower__petals { animation: dahlia-spin 120s linear infinite; }
-}
-@keyframes dahlia-spin { to { transform: rotate(360deg); } }
 /* Su desktop la descrizione resta a sinistra: la colonna destra è dello spazio del fiore */
 @media (min-width: 56em) {
   .hero .lead { max-width: min(34rem, 60%); }
@@ -716,3 +712,15 @@
 /* Eyebrow dell'hero su due righe, senza linea */
 .eyebrow--stack { display: flex; flex-direction: column; align-items: flex-start; gap: 0.15rem; }
 .eyebrow--stack::before { display: none; }
+
+/* Smartphone e tablet: pistillo nella "o" di "con", petali che sfumano dove toccano le scritte */
+@media (max-width: 55.99em) {
+  .hero-title h1, .tile--intro .lead, .tile--intro .eyebrow {
+    text-shadow: 0 0 4px #FBF6F4, 0 0 10px #FBF6F4, 0 0 18px #FBF6F4, 0 0 28px #FBF6F4, 0 0 36px #FBF6F4;
+  }
+  .hero-flower {
+    -webkit-mask-image: none; mask-image: none;
+  }
+}
+.hero-pistil { position: absolute; z-index: 2; border-radius: 50%; background: #C7AE88; box-shadow: 0 0 0 2px #85525D; pointer-events: none; }
+@media (min-width: 56em) { .hero-pistil { display: none; } }

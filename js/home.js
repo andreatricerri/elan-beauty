@@ -195,6 +195,31 @@
         bottom = ld ? ld.getBoundingClientRect().top - 6 : w.bottom;
       }
       var edgeX = t.right - 8;
+      if (!wide) {
+        /* Pistillo al centro della "o" di "con" */
+        var soft = $('.soft', h1), node = soft && soft.firstChild;
+        if (node && node.nodeType === 3 && node.textContent.length >= 2) {
+          var rg = document.createRange();
+          rg.setStart(node, 1); rg.setEnd(node, 2);
+          var o = rg.getBoundingClientRect();
+          var ocx = o.left + o.width / 2, ocy = o.top + o.height * 0.56;
+          var rr = Math.min(edgeX - ocx, 170);
+          if (rr >= 40) {
+            svg.style.left = (ocx - rr - w.left) + 'px';
+            svg.style.top = (ocy - w.top) + 'px';
+            svg.style.width = (rr * 2) + 'px';
+            svg.style.height = (rr * 2) + 'px';
+            svg.classList.add('is-ready');
+            var pis = $('.hero-pistil', wrap);
+            if (!pis) { pis = document.createElement('span'); pis.className = 'hero-pistil'; pis.setAttribute('aria-hidden', 'true'); wrap.appendChild(pis); }
+            var ps = Math.max(6, o.width * 0.36);
+            pis.style.cssText = 'left:' + (ocx - w.left - ps / 2) + 'px;top:' + (ocy - w.top - ps / 2) + 'px;width:' + ps + 'px;height:' + ps + 'px';
+            pis.hidden = false;
+            return;
+          }
+        }
+      }
+      var pis0 = $('.hero-pistil', wrap); if (pis0) pis0.hidden = true;
       var r = Math.min((bottom - top) / 2, (edgeX - maxRight) / 1.05, 300);
       if (r < 48) { svg.classList.remove('is-ready'); svg.style.width = '0px'; return; }
       var cx = edgeX - r, cy = (top + bottom) / 2;
