@@ -722,5 +722,7 @@
     -webkit-mask-image: none; mask-image: none;
   }
 }
-.hero-pistil { position: absolute; z-index: 2; border-radius: 50%; background: #C7AE88; box-shadow: 0 0 0 2px #85525D; pointer-events: none; }
+.hero-pistil { position: absolute; z-index: 2; border-radius: 50%; background: #C7AE88; box-shadow: inset 0 0 0 1.5px #85525D; pointer-events: none; }
 @media (min-width: 56em) { .hero-pistil { display: none; } }
+.hero-flower { max-width: none; }
+@media (max-width: 55.99em) { .hero-flower__core { display: none; } }

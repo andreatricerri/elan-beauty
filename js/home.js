@@ -202,7 +202,7 @@
           var rg = document.createRange();
           rg.setStart(node, 1); rg.setEnd(node, 2);
           var o = rg.getBoundingClientRect();
-          var ocx = o.left + o.width / 2, ocy = o.top + o.height * 0.56;
+          var ocx = o.left + o.width / 2, ocy = o.top + o.height * 0.575;
           var rr = Math.min(edgeX - ocx, 170);
           if (rr >= 40) {
             svg.style.left = (ocx - rr - w.left) + 'px';
@@ -212,7 +212,7 @@
             svg.classList.add('is-ready');
             var pis = $('.hero-pistil', wrap);
             if (!pis) { pis = document.createElement('span'); pis.className = 'hero-pistil'; pis.setAttribute('aria-hidden', 'true'); wrap.appendChild(pis); }
-            var ps = Math.max(6, o.width * 0.36);
+            var ps = Math.max(5, o.width * 0.26);
             pis.style.cssText = 'left:' + (ocx - w.left - ps / 2) + 'px;top:' + (ocy - w.top - ps / 2) + 'px;width:' + ps + 'px;height:' + ps + 'px';
             pis.hidden = false;
             return;
@@ -232,6 +232,7 @@
     var tm = null;
     window.addEventListener('resize', function () { clearTimeout(tm); tm = setTimeout(place, 100); });
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(place);
+    window.addEventListener('load', place);
     place();
   }
 
