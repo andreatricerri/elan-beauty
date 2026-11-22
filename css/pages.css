@@ -683,3 +683,22 @@
   .split--stretch .mosaic { height: 100%; grid-template-rows: minmax(0, 1.4fr) minmax(0, 1fr); }
   .split--stretch .mosaic img { aspect-ratio: auto; height: 100%; min-height: 10rem; }
 }
+
+/* ---------- Mezza dalia decorativa nell'hero ---------- */
+.tile--intro { --tile-pad: clamp(1.5rem, 1rem + 2.5vw, 3.25rem); padding: var(--tile-pad); }
+.hero-title { position: relative; }
+.hero-title h1 {
+  position: relative; z-index: 1;
+  text-shadow: 0 0 2px #FBF6F4, 0 0 12px #FBF6F4, 0 0 22px #FBF6F4;
+}
+.hero-flower {
+  position: absolute; z-index: 0; pointer-events: none;
+  top: 50%; right: calc(-1 * var(--tile-pad));
+  width: clamp(9rem, 2rem + 26vw, 27rem); height: auto;
+  transform: translate(50%, -50%);
+}
+.hero-flower__petals { transform-box: fill-box; transform-origin: center; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-flower__petals { animation: dahlia-spin 120s linear infinite; }
+}
+@keyframes dahlia-spin { to { transform: rotate(360deg); } }
